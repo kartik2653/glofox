@@ -130,3 +130,11 @@
 ## Notes
 - All dates must be in `YYYY-MM-DD` format.
 - All endpoints return JSON responses.
+
+## Postman Collection
+
+Download the Postman collection:
+
+[Download Collection](./postman/glofox.postman_collection.json)
+
+Import it into Postman to test all APIs.

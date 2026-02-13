@@ -1,0 +1,175 @@
+{
+  "info": {
+    "_postman_id": "1e651863-566a-4470-bd0a-4c8f0de23ac0",
+    "name": "Glofox",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40220433",
+    "_collection_link": "https://go.postman.co/collection/40220433-1e651863-566a-4470-bd0a-4c8f0de23ac0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Ping",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{GLOFOX_BASE_URL}}/ping",
+          "host": [
+            "{{GLOFOX_BASE_URL}}"
+          ],
+          "path": [
+            "ping"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Class",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"class_name\":\"Zumba\",\n    \"start_date\":\"2026-08-01\",\n    \"end_date\":\"2026-09-01\",\n    \"capacity\":100,\n    \"instructor_id\":123\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{GLOFOX_BASE_URL}}/classes",
+          "host": [
+            "{{GLOFOX_BASE_URL}}"
+          ],
+          "path": [
+            "classes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Classses",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"class_name\":\"Zumba\",\n    \"start_date\":\"2026-08-01\",\n    \"end_date\":\"2026-09-01\",\n    \"capacity\":100,\n    \"instructor_id\":123\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{GLOFOX_BASE_URL}}/classes?skip=1",
+          "host": [
+            "{{GLOFOX_BASE_URL}}"
+          ],
+          "path": [
+            "classes"
+          ],
+          "query": [
+            {
+              "key": "skip",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Booking",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"class_id\":1,\n    \"user_id\":23,\n    \"booking_date\":\"2026-08-09\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{GLOFOX_BASE_URL}}/bookings",
+          "host": [
+            "{{GLOFOX_BASE_URL}}"
+          ],
+          "path": [
+            "bookings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Bookings",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"class_id\":1,\n    \"user_id\":23,\n    \"booking_date\":\"2027-10-01\"\n}"
+        },
+        "url": {
+          "raw": "{{GLOFOX_BASE_URL}}/bookings?booking_date=2026-08-09",
+          "host": [
+            "{{GLOFOX_BASE_URL}}"
+          ],
+          "path": [
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "booking_date",
+              "value": "2026-08-09"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "GLOFOX_BASE_URL",
+      "value": ""
+    }
+  ]
+}
