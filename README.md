@@ -103,6 +103,7 @@
   - `booking_date` (optional) : filter by booking date
   - `skip` (optional, default 0): offset for pagination
   - `limit` (optional, default 10): limit for pagination
+  - `id` (optional) : filter by booking id
 - **Response:**
   ```json
   {

@@ -61,6 +61,9 @@ func (h *BookingHandler) ListBookings(c *fiber.Ctx) error {
 	if bookingDate := c.Query("booking_date"); bookingDate != "" {
 		query["booking_date"] = bookingDate
 	}
+	if id := c.Query("id"); id != "" {
+		query["id"] = id
+	}
 
 	skipStr := c.Query("skip", "0")
 	limitStr := c.Query("limit", "10")
